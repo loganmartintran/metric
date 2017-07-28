@@ -2,7 +2,7 @@
 
 ## Metric is an analytic service that offers a client-side JavaScript snippet that allows users to track events, a server side API that captures and saves those events to a database, and a Rails application that displays the captured event data to the user.
 
-This app is deployed on Heroku: https://booted-resource.herokuapp.com/
+This app is deployed on Heroku: https://mighty-falls-32073.herokuapp.com/
 
 The source code is available, here, on github: https://github.com/loganmartintran/metric
 
