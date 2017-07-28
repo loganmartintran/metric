@@ -24,7 +24,8 @@ source 'https://rubygems.org'
  group :development, :test do
    gem 'byebug'
    gem 'spring'
-   gem 'rspec-rails'
+   gem "nyan-cat-formatter"
+   gem 'rspec-rails', '~> 3.0'
    gem 'shoulda'
    gem 'faker'
    gem 'factory_girl_rails'
