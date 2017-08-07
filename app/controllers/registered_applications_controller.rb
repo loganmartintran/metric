@@ -11,8 +11,8 @@ class RegisteredApplicationsController < ApplicationController
 
   def create
     @app = RegisteredApplication.new
-    @app.name = params[:app][:name]
-    @app.url = params[:app][:url]
+    @app.name = params[:registered_application][:name]
+    @app.url = params[:registered_application][:url]
     @app.user = current_user
 
     if @app.save
@@ -30,8 +30,8 @@ class RegisteredApplicationsController < ApplicationController
 
   def update
     @app = RegisteredApplication.find(params[:id])
-    @app.name = params[:app][:name]
-    @app.url = params[:app][:url]
+    @app.name = params[:registered_application][:name]
+    @app.url = params[:registered_application][:url]
 
     if @app.save
       flash[:notice] = "Your application has been updated."
