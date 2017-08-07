@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :registered_applications, dependent: :destroy
+
   before_save { self.email = email.downcase if email.present? }
 
   validates :email,
