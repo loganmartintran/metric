@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe Application, type: :model do
+RSpec.describe RegisteredApplication, type: :model do
   let(:user) { User.create!(email: 'user@user.com', password: 'password') }
-  let(:app) { Application.create!(name: 'app', url: 'app@app.com', user: user) }
+  let(:app) { RegisteredApplication.create!(name: 'app', url: 'app@app.com', user: user) }
 
   it { is_expected.to validate_presence_of(:name) }
   it { is_expected.to validate_presence_of(:url) }

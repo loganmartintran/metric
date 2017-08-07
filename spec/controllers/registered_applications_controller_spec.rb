@@ -5,6 +5,10 @@ RSpec.describe RegisteredApplicationsController, type: :controller do
   let(:app) { RegisteredApplication.create!(name: 'app', url: 'app@app.com', user: user) }
 
   describe "GET #index" do
+    before do
+      sign_in user
+    end
+
     it "returns http success" do
       get :index
       expect(response).to have_http_status(:success)
@@ -17,6 +21,10 @@ RSpec.describe RegisteredApplicationsController, type: :controller do
   end
 
   describe "GET #show" do
+    before do
+      sign_in user
+    end
+
     it "returns http success" do
       get :show, {id: app.id}
       expect(response).to have_http_status(:success)
@@ -34,6 +42,10 @@ RSpec.describe RegisteredApplicationsController, type: :controller do
   end
 
   describe "GET #new" do
+    before do
+      sign_in user
+    end
+    
     it "returns http success" do
       get :new
       expect(response).to have_http_status(:success)
