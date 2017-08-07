@@ -19,7 +19,7 @@ class RegisteredApplicationsController < ApplicationController
       flash[:notice] = "Your application has been registered!"
       redirect_to @app
     else
-      flash.now[:alert] = "There was an error registering your application. Please try again."
+      flash[:alert] = "There was an error registering your application. Please try again."
       render :new
     end
   end
@@ -37,7 +37,7 @@ class RegisteredApplicationsController < ApplicationController
       flash[:notice] = "Your application has been updated."
       redirect_to @app
     else
-      flash.now[:alert] = "There was an error updating your application. Please try again."
+      flash[:alert] = "There was an error updating your application. Please try again."
       render :edit
     end
   end
@@ -49,7 +49,7 @@ class RegisteredApplicationsController < ApplicationController
       flash[:notice] = "Your application was successfully deleted"
       redirect_to registered_applications_path
     else
-      flash.now[:alert] = "There was an error deleting your application. Please try again."
+      flash[:alert] = "There was an error deleting your application. Please try again."
       redirect_to @app
     end
   end
