@@ -1,7 +1,22 @@
-<h1><%= @app.name %></h1>
-<h4><%= @app.url %></h4>
-
-<div class="col-md-4">
-  <%= link_to "Edit", edit_registered_application_path(@app), class: 'btn btn-success' %>
-  <%= link_to "Delete", @app, method: :delete, class: 'btn btn-danger', data: { confirm: "Are you sure you want to delete this app?" } %>
+<div class="containter text-center">
+  <h1><%= @app.name %></h1>
+  <h4><%= @app.url %></h4>
+    <%= link_to "Edit", edit_registered_application_path(@app), class: 'btn btn-success' %>
+    <%= link_to "Delete", @app, method: :delete, class: 'btn btn-danger', data: { confirm: "Are you sure you want to delete this app?" } %>
 </div>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2 text-center">
+      <table class="table table-hover">
+        <tr>
+          <th>Event Name</th>
+          <th>Event Count</th>
+        </tr>
+        <% @events.each do |e| %>
+        <tr>
+          <th><%= e[0] %></th>
+          <th><%= e[1].count %></th>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>

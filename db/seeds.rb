@@ -28,7 +28,7 @@ end
 apps = RegisteredApplication.all
 
 #create 20 events
-20.times do
+100.times do
   Event.create!(
     name: Faker::Hacker.verb,
     registered_application: apps.sample
