@@ -10,7 +10,7 @@ RSpec.describe RegisteredApplication, type: :model do
 
   describe "attributes" do
     it "should have name, url, and user attributes" do
-        expect(app).to have_attributes(name: 'app', url: 'app@app.com', user: user)
+      expect(app).to have_attributes(name: 'app', url: 'app@app.com', user: user)
     end
   end
 end
