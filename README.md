@@ -11,7 +11,7 @@ The source code is available, here, on github: https://github.com/loganmartintra
 **Rails v. 4.2.8**
 **Databases:** SQLite (Test, Development), PostgreSQL (Production)
 
-**To run Booted locally:**
+**To run Metric locally:**
 - Clone the repository
 - Run bundle install
 - Create and migrate the SQLite database with rake db:create and rake db:migrate
