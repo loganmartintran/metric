@@ -45,7 +45,7 @@ RSpec.describe RegisteredApplicationsController, type: :controller do
     before do
       sign_in user
     end
-    
+
     it "returns http success" do
       get :new
       expect(response).to have_http_status(:success)
@@ -68,16 +68,16 @@ RSpec.describe RegisteredApplicationsController, type: :controller do
     end
 
     it "increases the number of RegisteredApplications by 1" do
-      expect{ post :create, app: {name: 'app', url: 'app@app.com', user: user} }.to change(RegisteredApplication,:count).by(1)
+      expect{ post :create, registered_application: {name: 'app', url: 'app@app.com', user: user} }.to change(RegisteredApplication,:count).by(1)
     end
 
     it "assigns the new RegisteredApplication to a new @registered_application" do
-      post :create, app: {name: 'app', url: 'app@app.com', user: user}
+      post :create, registered_application: {name: 'app', url: 'app@app.com', user: user}
       expect(assigns(:app)).to eq RegisteredApplication.last
     end
 
     it "redirects to the new RegisteredApplication" do
-      post :create, app: {name: 'app', url: 'app@app.com', user: user}
+      post :create, registered_application: {name: 'app', url: 'app@app.com', user: user}
       expect(response).to redirect_to RegisteredApplication.last
     end
   end
@@ -115,7 +115,7 @@ RSpec.describe RegisteredApplicationsController, type: :controller do
       new_name = "new name"
       new_url = "new url"
 
-      put :update, id: app.id, app:{name: new_name, url: new_url, user: user}
+      put :update, id: app.id, registered_application:{name: new_name, url: new_url, user: user}
 
       updated_app = assigns(:app)
       expect(updated_app.id).to eq(app.id)
@@ -128,7 +128,7 @@ RSpec.describe RegisteredApplicationsController, type: :controller do
       new_name = "new name"
       new_url = "new url"
 
-      put :update, id: app.id, app:{name: new_name, url: new_url, user: user}
+      put :update, id: app.id, registered_application:{name: new_name, url: new_url, user: user}
 
       expect(response).to redirect_to app
     end
