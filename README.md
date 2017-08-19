@@ -12,14 +12,15 @@ The source code is available, here, on github: https://github.com/loganmartintra
 **Databases:** SQLite (Test, Development), PostgreSQL (Production)
 
 **Client-Side JS**
-Add the following snippet to your application.js file of your app that you want to run Metric on:
+The following code is an example of how you would fire an event to the Metric API using JavaScript. You can add the following snippet to your application.js file and replace the domain with your app accordingly.
+
 ```javascript
 var metric = {};
   metric.report= function(eventName) {
     var event = {event: {name: eventName}};
 
     var request = new XMLHttpRequest();
-    request.open("POST", "http://localhost:3000/api/events", true);
+    request.open("POST", "http://yourdomain.here/api/events", true);
     request.setRequestHeader('Content-Type', 'application/json');
     request.sent(JSON.stringify(event));
   };

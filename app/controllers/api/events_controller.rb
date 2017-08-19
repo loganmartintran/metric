@@ -17,7 +17,7 @@ class API::EventsController < ApplicationController
     else
       @event = registered_application.events.new(event_params)
     end
-    
+
     if @event && @event.save
       render json: @event, status: :created
     elsif @event
