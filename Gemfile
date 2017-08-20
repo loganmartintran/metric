@@ -23,6 +23,8 @@ source 'https://rubygems.org'
  gem 'figaro'
  gem 'bcrypt'
  gem 'devise'
+ gem 'chartkick'
+ gem 'groupdate'
 
  group :development, :test do
    gem 'byebug'
