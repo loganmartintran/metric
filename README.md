@@ -27,7 +27,7 @@ The source code is available, here, on github: https://github.com/loganmartintra
 **Client-Side JS**
 The following code snippet is an example of how you would fire an event to the Metric API using JavaScript. You can add the following snippet to your `application.js` file in your app and replace the domain with Metric's domain accordingly:
 
-_(Example: If you are running Metric on `localhost:3000`, the domain would be `http://localhost:3009/api/events`)._
+_(Example: If you are running Metric on `localhost:3000`, the domain would be `http://localhost:3000/api/events`)._
 
 ```javascript
 var metric = {};
@@ -40,7 +40,7 @@ var metric = {};
     request.send(JSON.stringify(event));
   };
 ```
-You can then call `metric.report(eventName);` on any page to log events to Metric. `eventName` is a string argument.
+You can then call `metric.report(eventName);` to log events accordingly to Metric. `eventName` is a string argument which becomes the name of the event logged in Metric's database. 
 
 **To run Metric locally:**
 - Clone the repository
