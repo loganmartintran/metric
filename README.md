@@ -40,7 +40,7 @@ var metric = {};
     request.send(JSON.stringify(event));
   };
 ```
-You can then call `metric.report(eventName);` to log events accordingly to Metric. `eventName` is a string argument which becomes the name of the event logged in Metric's database. 
+You can then call `metric.report(eventName);` to log events accordingly to Metric. `eventName` is a string argument which becomes the name of the event logged in Metric's database.
 
 **To run Metric locally:**
 - Clone the repository
@@ -48,3 +48,4 @@ You can then call `metric.report(eventName);` to log events accordingly to Metri
 - Create and migrate the SQLite database with `rake db:create` and `rake db:migrate`
 - Start the server using `rails s`
 - Run the app on `localhost:3000`
+- Register the URL of your app you want to track with Metric
